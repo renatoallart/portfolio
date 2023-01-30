@@ -1,5 +1,6 @@
 import Image from "next/image"
 import config from "../portfolioConfig.json"
+import ecome from "/public/img/ecommerce_home.png"
 
 import { NavIcons } from "../components/NavIcons"
 export function Profile() {
@@ -29,7 +30,7 @@ export function Profile() {
       >
         <Image
           className="rounded-full w-[288px] h-[288px] xl:w-[366px] xl:h-[366px]"
-          src="/../public/img/profileImg.jpg"
+          src={ecome}
           priority
           width={366}
           height={366}
