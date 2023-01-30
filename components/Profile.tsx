@@ -1,5 +1,5 @@
 import Image from "next/image"
-import profileImg from "@/public/img/profileImg.png"
+import profileImg from "../public/img/profileImg.png"
 
 import config from "@/portfolioConfig.json"
 
