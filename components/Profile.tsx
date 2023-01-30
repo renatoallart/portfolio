@@ -1,9 +1,7 @@
 import Image from "next/image"
-import profileImg from "../public/img/profileImg.jpg"
+import config from "../portfolioConfig.json"
 
-import config from "@/portfolioConfig.json"
-
-import { NavIcons } from "@/components/NavIcons"
+import { NavIcons } from "../components/NavIcons"
 export function Profile() {
   // use state approach = https://stackoverflow.com/questions/48703510/change-image-on-hover-in-jsx
 
