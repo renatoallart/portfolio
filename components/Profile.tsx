@@ -8,14 +8,14 @@ export function Profile() {
 
   const socialLinks = [
     {
-      icon: "/../public/icons/github_pink.png",
-      hover: "/../public/hovers/github.png",
+      icon: "/public/icons/github_pink.png",
+      hover: "/public/hovers/github.png",
       name: "GitHub",
       url: "https://github.com/renatoallart",
     },
     {
-      icon: "/../public/icons/linkedin.png",
-      hover: "/../public/hovers/linkedin.png",
+      icon: "/public/icons/linkedin.png",
+      hover: "/public/hovers/linkedin.png",
       name: "linkedin",
       url: "https://www.linkedin.com/in/jrenato4434566",
     },
