@@ -2,52 +2,52 @@
   "author": "José Renato Santana Santos",
   "socialLinks": [
     {
-      "icon": "/../public/icons/github_pink.png",
-      "hover": "/../public/hovers/github.png",
+      "icon": "../public/icons/github_pink.png",
+      "hover": "../public/hovers/github.png",
       "name": "GitHub",
       "url": "https://github.com/renatoallart"
     },
     {
-      "icon": "/../public/icons/linkedin.png",
-      "hover": "/../public/hovers/linkedin.png",
+      "icon": "../public/icons/linkedin.png",
+      "hover": "../public/hovers/linkedin.png",
       "name": "linkedin",
       "url": "https://www.linkedin.com/in/jrenato4434566"
     }
   ],
-  "profileImg": "/../public/img/profileImg.jpg",
+  "profileImg": "../public/img/profileImg.jpg",
   "projects": [
     {
       "name": "Pokedex",
-      "homeImg": "/../public/img/pokedex_home.png",
+      "homeImg": "../public/img/pokedex_home.png",
       "nav": [
         {
           "name": "GitHub",
           "url": "https://github.com/renatoallart/pokedex",
-          "icon": "/../public/icons/github_pink.png",
-          "hoverIcon": "/../public/hovers/github.png"
+          "icon": "../public/icons/github_pink.png",
+          "hoverIcon": "../public/hovers/github.png"
         },
         {
           "name": "Live Demo",
           "url": "https://pokedex-renatoallart.vercel.app/",
-          "icon": "/../public/icons/web_pink.png",
-          "hoverIcon": "/../public/hovers/web.png"
+          "icon": "../public/icons/web_pink.png",
+          "hoverIcon": "../public/hovers/web.png"
         }
       ],
       "img": [
-        "/../public/img/pokedex_detail_mobile.png",
-        "/../public/img/pokedex_detail.png",
-        "/../public/img/pokedex_home_mobile.png",
-        "/../public/img/pokedex_home.png"
+        "../public/img/pokedex_detail_mobile.png",
+        "../public/img/pokedex_detail.png",
+        "../public/img/pokedex_home_mobile.png",
+        "../public/img/pokedex_home.png"
       ],
       "summary": "A responsive application in Vitejs, where the User can search a Pokemon by name, and generate a random list with 3 Pokemons. Clicked on Pokemon can see all Pokemon's stats displayed in the chart.",
       "stack": [
-        { "name": "Vitejs", "icon": "/../public/icons/vite.png" },
-        { "name": "React", "icon": "/../public/icons/React.png" },
-        { "name": "Html", "icon": "/../public/icons/html.png" },
-        { "name": "Javascript", "icon": "/../public/icons/javascript.png" },
-        { "name": "Css", "icon": "/../public/icons/css.png" },
-        { "name": "Tailwind", "icon": "/../public/icons/tailwind.png" },
-        { "name": "Vercel", "icon": "/../public/icons/vercel.png" }
+        { "name": "Vitejs", "icon": "../public/icons/vite.png" },
+        { "name": "React", "icon": "../public/icons/React.png" },
+        { "name": "Html", "icon": "../public/icons/html.png" },
+        { "name": "Javascript", "icon": "../public/icons/javascript.png" },
+        { "name": "Css", "icon": "../public/icons/css.png" },
+        { "name": "Tailwind", "icon": "../public/icons/tailwind.png" },
+        { "name": "Vercel", "icon": "../public/icons/vercel.png" }
       ],
 
       "technologies": [
