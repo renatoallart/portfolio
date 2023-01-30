@@ -31,7 +31,7 @@ export function Profile() {
       >
         <Image
           className="rounded-full w-[288px] h-[288px] xl:w-[366px] xl:h-[366px]"
-          src={profileImg}
+          src="../public/img/profileImg.jpg"
           priority
           width={366}
           height={366}
