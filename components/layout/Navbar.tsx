@@ -1,8 +1,6 @@
-import Link from "next/link";
-
-import { navLink } from "@/lib/navbar";
-import { v4 as uuidv4 } from "uuid";
-import { NavIcons } from "../NavIcons";
+import { navLink } from "@/lib/navbar"
+import { v4 as uuidv4 } from "uuid"
+import { NavIcons } from "../NavIcons"
 
 export function Navbar() {
   return (
@@ -28,5 +26,5 @@ export function Navbar() {
         </ul>
       </nav>
     </header>
-  );
+  )
 }
