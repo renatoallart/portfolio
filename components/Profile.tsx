@@ -1,6 +1,10 @@
 import Image from "next/image"
 import config from "../portfolioConfig.json"
 import avatar from "/public/img/profileImg.jpg"
+import github_pink from "/public/icons/github_pink.png"
+import hoverGithub from "/public/hovers/github.png"
+import linkedin from "/public/icons/linkedin.png"
+import hoverLinkedin from "/public/hovers/linkedin.png"
 
 import { NavIcons } from "../components/NavIcons"
 export function Profile() {
@@ -8,14 +12,14 @@ export function Profile() {
 
   const socialLinks = [
     {
-      icon: "/public/icons/github_pink.png",
-      hover: "/public/hovers/github.png",
+      icon: github_pink,
+      hover: hoverGithub,
       name: "GitHub",
       url: "https://github.com/renatoallart",
     },
     {
-      icon: "/public/icons/linkedin.png",
-      hover: "/public/hovers/linkedin.png",
+      icon: linkedin,
+      hover: hoverLinkedin,
       name: "linkedin",
       url: "https://www.linkedin.com/in/jrenato4434566",
     },
