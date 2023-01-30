@@ -1,0 +1,108 @@
+{
+  "author": "José Renato Santana Santos",
+  "socialLinks": [
+    {
+      "icon": "/../public/icons/github_pink.png",
+      "hover": "/../public/hovers/github.png",
+      "name": "GitHub",
+      "url": "https://github.com/renatoallart"
+    },
+    {
+      "icon": "/../public/icons/linkedin.png",
+      "hover": "/../public/hovers/linkedin.png",
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/in/jrenato4434566"
+    }
+  ],
+  "profileImg": "/../public/img/profileImg.jpg",
+  "projects": [
+    {
+      "name": "Pokedex",
+      "homeImg": "/../public/img/pokedex_home.png",
+      "nav": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/renatoallart/pokedex",
+          "icon": "/../public/icons/github_pink.png",
+          "hoverIcon": "/../public/hovers/github.png"
+        },
+        {
+          "name": "Live Demo",
+          "url": "https://pokedex-renatoallart.vercel.app/",
+          "icon": "/../public/icons/web_pink.png",
+          "hoverIcon": "/../public/hovers/web.png"
+        }
+      ],
+      "img": [
+        "/../public/img/pokedex_detail_mobile.png",
+        "/../public/img/pokedex_detail.png",
+        "/../public/img/pokedex_home_mobile.png",
+        "/../public/img/pokedex_home.png"
+      ],
+      "summary": "A responsive application in Vitejs, where the User can search a Pokemon by name, and generate a random list with 3 Pokemons. Clicked on Pokemon can see all Pokemon's stats displayed in the chart.",
+      "stack": [
+        { "name": "Vitejs", "icon": "/../public/icons/vite.png" },
+        { "name": "React", "icon": "/../public/icons/React.png" },
+        { "name": "Html", "icon": "/../public/icons/html.png" },
+        { "name": "Javascript", "icon": "/../public/icons/javascript.png" },
+        { "name": "Css", "icon": "/../public/icons/css.png" },
+        { "name": "Tailwind", "icon": "/../public/icons/tailwind.png" },
+        { "name": "Vercel", "icon": "/../public/icons/vercel.png" }
+      ],
+
+      "technologies": [
+        { "name": "Vitejs", "link": "https://vitejs.dev/" },
+        { "name": "Reactjs", "link": "https://reactjs.org/" },
+        { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
+        { "name": "Axios", "link": "https://axios-http.com/" },
+        { "name": "ApexChart", "link": "https://apexcharts.com/" }
+      ]
+    },
+    {
+      "name": "E-commerce",
+      "summary": "A responsive application in Nextjs, where the user can login with Facebook, Google Account, Github. Add products to a shopping cart. ",
+      "homeImg": "/../public/img/ecommerce_home.png",
+      "nav": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/renatoallart/ecommerce",
+          "icon": "/../public/icons/github_pink.png",
+          "hoverIcon": "/../public/hovers/github.png"
+        },
+        {
+          "name": "Live Demo",
+          "url": "https://ecommerce-renatoallart.vercel.app/",
+          "icon": "/../public/icons/web_pink.png",
+          "hoverIcon": "/../public/hovers/web.png"
+        }
+      ],
+      "img": [
+        "/../public/img/ecommerce_auth.png",
+        "/../public/img/ecommerce_cart.png",
+        "/../public/img/ecommerce_home.png",
+        "/../public/img/ecommerce_mobile.png"
+      ],
+      "stack": [
+        { "name": "Nextjs", "icon": "/../public/icons/next-js.png" },
+        { "name": "Typescript", "icon": "/../public/icons/typescript.png" },
+        { "name": "React", "icon": "/../public/icons/React.png" },
+        { "name": "Html", "icon": "/../public/icons/html.png" },
+        { "name": "Css", "icon": "/../public/icons/css.png" },
+        { "name": "Tailwind", "icon": "/../public/icons/tailwind.png" },
+        { "name": "Vercel", "icon": "/../public/icons/vercel.png" }
+      ],
+
+      "tec": [
+        { "name": "Nextjs", "link": "https://nextjs.org/" },
+        { "name": "Reactjs", "link": "https://reactjs.org/" },
+        { "name": "React Query", "link": "https://tanstack.com/query/latest" },
+        { "name": "Tailwindcss", "link": "https://tailwindcss.com/" },
+        { "name": "Axios", "link": "https://axios-http.com/" },
+        { "name": "Zustand", "link": "https://zustand-demo.pmnd.rs/" },
+        { "name": "Mantine", "link": "https://mantine.dev/" },
+        { "name": "Typescript", "link": "https://www.typescriptlang.org/" },
+        { "name": "ApexChart", "link": "https://apexcharts.com/" }
+      ]
+    }
+  ]
+}
