@@ -1,6 +1,7 @@
-import config from "@/portfolioConfig.json";
-import Image from "next/image";
-import { NavIcons } from "./NavIcons";
+import { portfolio } from "@/portfolio"
+import Image from "next/image"
+import { NavIcons } from "./NavIcons"
+import { v4 as uuidv4 } from "uuid"
 
 export function Projects() {
   return (
@@ -10,7 +11,7 @@ export function Projects() {
           Projects
         </h2>
         <div className="flex flex-col gap-4 md:flex md:flex-row md:gap-[73px] md:mt-[50px] ">
-          {config.projects.slice(0, 2).map((project) => {
+          {portfolio.projects.slice(0, 2).map((project) => {
             return (
               <div
                 key={project.name}
@@ -18,7 +19,7 @@ export function Projects() {
               >
                 <Image
                   className="w-[296px] h-[167px] xl:w-[387px] xl:h-[181px]"
-                  src={project.homeImg}
+                  src={project.thumbnail}
                   priority
                   width="296"
                   height="167"
@@ -29,27 +30,25 @@ export function Projects() {
                   {project.name}
                 </h3>
                 <div className="flex items-center justify-center gap-16 mt-2">
-                  {project.nav.map((item) => (
-                    <NavIcons
-                      key={item.icon}
-                      url={item.url}
-                      width={
-                        item.icon === "/../public/icons/web_pink.png" ? 66 : 54
-                      }
-                      height={
-                        item.icon === "/../public/icons/web_pink.png" ? 66 : 54
-                      }
-                      hover={item.hoverIcon}
-                      icon={item.icon}
-                    />
-                  ))}
+                  {project.nav.map((item) => {
+                    return (
+                      <NavIcons
+                        key={uuidv4()}
+                        url={item.url}
+                        width={54}
+                        height={54}
+                        hover={item.hoverIcon}
+                        icon={item.icon}
+                      />
+                    )
+                  })}
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </section>
       <div className=" mt-[32px] md:m-[73px] rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
     </>
-  );
+  )
 }

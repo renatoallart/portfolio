@@ -1,29 +1,10 @@
 import Image from "next/image"
-import config from "../portfolioConfig.json"
-import avatar from "/public/img/profileImg.jpg"
-import github_pink from "/public/icons/github_pink.png"
-import hoverGithub from "/public/hovers/github.png"
-import linkedin from "/public/icons/linkedin.png"
-import hoverLinkedin from "/public/hovers/linkedin.png"
-
+import { portfolio } from "@/portfolio"
 import { NavIcons } from "../components/NavIcons"
+
 export function Profile() {
   // use state approach = https://stackoverflow.com/questions/48703510/change-image-on-hover-in-jsx
 
-  const socialLinks = [
-    {
-      icon: github_pink,
-      hover: hoverGithub,
-      name: "GitHub",
-      url: "https://github.com/renatoallart",
-    },
-    {
-      icon: linkedin,
-      hover: hoverLinkedin,
-      name: "linkedin",
-      url: "https://www.linkedin.com/in/jrenato4434566",
-    },
-  ]
   return (
     <>
       <section
@@ -34,11 +15,11 @@ export function Profile() {
       >
         <Image
           className="rounded-full w-[288px] h-[288px] xl:w-[366px] xl:h-[366px]"
-          src={avatar}
+          src={portfolio.avatar}
           priority
           width={366}
           height={366}
-          alt={config.author}
+          alt={portfolio.author}
         />
         <div
           className="mt-[20px] 
@@ -56,7 +37,7 @@ export function Profile() {
             className="flex flex-row-reverse gap-[70px] items-center justify-center mt-[40px]
           xl:w-[218px] xl:h-[75px]"
           >
-            {socialLinks.map((link) => (
+            {portfolio.socialLinks.map((link) => (
               <NavIcons
                 key={link.name}
                 url={link.url}

@@ -1,4 +1,4 @@
-import { navLink } from "@/lib/navbar"
+import { navLink } from "@/lib/navbarIcons"
 import { v4 as uuidv4 } from "uuid"
 import { NavIcons } from "../NavIcons"
 
