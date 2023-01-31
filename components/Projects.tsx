@@ -15,17 +15,17 @@ export function Projects() {
             return (
               <div
                 key={project.name}
-                className="p-4 border-2 rounded-md border-md border-brand"
+                className="flex flex-col h-[370px] w-[344px] xl:w-[450px] xl:h-[400px] p-4 border-2 rounded-md border-md border-brand"
               >
                 <Image
-                  className="w-[296px] h-[167px] xl:w-[387px] xl:h-[181px]"
+                  className="w-[296px] self-center h-[167px] xl:w-[387px] xl:h-[181px]"
                   src={project.thumbnail}
                   priority
-                  width="296"
-                  height="167"
+                  width={296}
+                  height={167}
                   alt={project.name}
                 />
-                <div className=" mt-[32px] rounded-full shadow-sm w-[300px] shadow-brand bg-brand h-[5px]"></div>
+                <div className=" mt-[32px] self-center rounded-full shadow-sm w-[300px] shadow-brand bg-brand h-[5px]"></div>
                 <h3 className="mt-4 text-lg font-semibold text-center text-white">
                   {project.name}
                 </h3>
@@ -35,8 +35,18 @@ export function Projects() {
                       <NavIcons
                         key={uuidv4()}
                         url={item.url}
-                        width={54}
-                        height={54}
+                        width={
+                          String(item.icon.src) ===
+                          "/_next/static/media/web_pink.470aa13e.png"
+                            ? 66
+                            : 54
+                        }
+                        height={
+                          String(item.icon.src) ===
+                          "/_next/static/media/web_pink.470aa13e.png"
+                            ? 66
+                            : 54
+                        }
                         hover={item.hoverIcon}
                         icon={item.icon}
                       />

@@ -37,16 +37,29 @@ export function Profile() {
             className="flex flex-row-reverse gap-[70px] items-center justify-center mt-[40px]
           xl:w-[218px] xl:h-[75px]"
           >
-            {portfolio.socialLinks.map((link) => (
-              <NavIcons
-                key={link.name}
-                url={link.url}
-                icon={link.icon}
-                hover={link.hover}
-                width={54}
-                height={49}
-              />
-            ))}
+            {portfolio.socialLinks.map((link) => {
+              // console.log(link.icon.src)
+              return (
+                <NavIcons
+                  key={link.name}
+                  url={link.url}
+                  icon={link.icon}
+                  hover={link.hover}
+                  width={
+                    String(link.icon.src) ===
+                    "/_next/static/media/linkedin.75340abe.png"
+                      ? 66
+                      : 54
+                  }
+                  height={
+                    String(link.icon.src) ===
+                    "/_next/static/media/linkedin.75340abe.png"
+                      ? 66
+                      : 54
+                  }
+                />
+              )
+            })}
           </ul>
         </div>
       </section>
