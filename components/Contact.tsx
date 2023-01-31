@@ -1,11 +1,12 @@
-import { useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import Image from "next/image";
-import send_email from "@/public/icons/send_email.png";
-import send from "@/public/hovers/send.png";
-import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import Image from "next/image"
+import send_email from "@/public/icons/send_email.png"
+import send from "@/public/hovers/send.png"
+import emailjs from "@emailjs/browser"
+import { strict } from "assert"
 
 const formSchema = z.object({
   name: z
@@ -20,23 +21,24 @@ const formSchema = z.object({
   message: z.string().min(10, {
     message: "Message must've least 10 characters",
   }),
-});
+})
 
-type TFormSchema = z.infer<typeof formSchema>;
+type TFormSchema = z.infer<typeof formSchema>
 export function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<TFormSchema>({
     resolver: zodResolver(formSchema),
-  });
+  })
 
-  const form = useRef(null);
-  const [hoverIcon, setHoverIcon] = useState(false);
+  const form = useRef(null)
+  const [hoverIcon, setHoverIcon] = useState(false)
 
   function onSubmit() {
-    if (!form.current) return;
+    if (!form.current) return
     // it was needed add NEXT_PUBLIC to the Browsers the access the env.local
     //https://nextjs.org/docs/basic-features/environment-variables#loading-environment-variables
     emailjs
@@ -48,12 +50,14 @@ export function Contact() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result.text)
         },
         (error) => {
-          console.log(error.text);
+          console.log(error.text)
         }
-      );
+      )
+    alert("email send with successes!")
+    reset({ email: "", name: "", message: "" })
   }
 
   return (
@@ -119,5 +123,5 @@ export function Contact() {
         </button>
       </form>
     </section>
-  );
+  )
 }

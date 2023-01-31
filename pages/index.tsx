@@ -1,7 +1,7 @@
-import { Contact } from "@/components/Contact";
-import { Profile } from "@/components/Profile";
-import { Projects } from "@/components/Projects";
-import Head from "next/head";
+import { Contact } from "@/components/Contact"
+import { Profile } from "@/components/Profile"
+import { Projects } from "@/components/Projects"
+import Head from "next/head"
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
       </Head>
 
       <Profile />
-      <Projects />
+      <Projects length={2} />
       <Contact />
     </>
-  );
+  )
 }

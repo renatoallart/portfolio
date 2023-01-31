@@ -1,17 +1,17 @@
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import Image, { StaticImageData } from "next/image"
+import Link from "next/link"
+import { useState } from "react"
 
 interface INavIconsProps {
-  url: string;
-  hover: string | StaticImageData;
-  icon: string | StaticImageData;
-  width: number;
-  height: number;
+  url: string
+  hover: string | StaticImageData
+  icon: string | StaticImageData
+  width: number
+  height: number
 }
 
 export function NavIcons({ url, hover, icon, width, height }: INavIconsProps) {
-  const [hoverIcon, setHoverIcon] = useState(false);
+  const [hoverIcon, setHoverIcon] = useState(false)
 
   return (
     <Link
@@ -29,5 +29,5 @@ export function NavIcons({ url, hover, icon, width, height }: INavIconsProps) {
         alt={`${icon}`}
       />
     </Link>
-  );
+  )
 }
