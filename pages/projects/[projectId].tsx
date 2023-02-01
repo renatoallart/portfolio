@@ -25,7 +25,7 @@ interface ITechnologies {
 
 interface IProjectProps {
   name: string
-  id: number
+  id: string
   thumbnail: StaticImageData
   img: StaticImageData[]
   summary: string
@@ -34,9 +34,9 @@ interface IProjectProps {
   tec: ITechnologies[]
 }
 
-export default function Project({ project }: { project: IProjectProps }) {
+export default function index({ project }: { project: IProjectProps }) {
   return (
-    <section className="m-6 flex flex-col justify-center items-center text-white">
+    <section className="flex flex-col items-center justify-center m-6 text-white">
       <Card
         id={project.id}
         name={project.name}
@@ -61,9 +61,9 @@ export default function Project({ project }: { project: IProjectProps }) {
           })}
         </div>
       </div>
-      <div className=" mt-6">
+      <div className="mt-6 ">
         <h3 className="m-4 text-xl text-center">Technologies</h3>
-        <ul className="flex flex-wrap justify-center items-center gap-2 ">
+        <ul className="flex flex-wrap items-center justify-center gap-2 ">
           {project.tec.map((item) => (
             <li
               key={item.name}
@@ -87,9 +87,7 @@ export async function getStaticProps(
   const { params } = context
   if (!params) return
   const { projectId } = params
-  const project = portfolio.projects.find(
-    (project) => project.id === Number(projectId)
-  )
+  const project = portfolio.projects.find((project) => project.id === projectId)
 
   console.log(project)
   return {
@@ -102,7 +100,7 @@ export async function getStaticProps(
 export async function getStaticPaths() {
   const paths = portfolio.projects.map((project) => ({
     params: {
-      projectId: String(project.id),
+      projectId: project.id,
     },
   }))
   return {

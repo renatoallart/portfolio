@@ -48,7 +48,7 @@ export const portfolio = {
   projects: [
     {
       name: "Pokedex",
-      id: 1,
+      id: "1",
       thumbnail: pokedexThumbnail,
       img: pokedexImg,
       summary:
@@ -86,7 +86,7 @@ export const portfolio = {
     },
     {
       name: "E-commerce",
-      id: 2,
+      id: "2",
       thumbnail: ecommerceThumb,
       img: ecommerceImg,
       summary:

@@ -12,14 +12,14 @@ interface INav {
 }
 interface ICardProps {
   name: string
-  id: number
+  id: string
   thumbnail: StaticImageData
   nav: INav[]
 }
 
 export function Card({ name, id, thumbnail, nav }: ICardProps) {
   const router = useRouter()
-  function handleClick(id: number) {
+  function handleClick(id: string) {
     router.push(
       `/projects/${id}`
       // {
