@@ -12,12 +12,14 @@ import hoverWeb from "/public/hovers/web.png"
 // Stack Icons
 
 import Vitejs from "/public/icons/vite.png"
-import React from "/public/icons/React.png"
+import React from "/public/icons/react.png"
 import Html from "/public/icons/html.png"
 import Javascript from "/public/icons/javascript.png"
 import Css from "/public/icons/css.png"
 import Tailwind from "/public/icons/tailwind.png"
 import Vercel from "/public/icons/vercel.png"
+import Nextjs from "/public/icons/nextjs.png"
+import TypeScript from "/public/icons/typescript.png"
 
 // Thumbs
 import pokedexThumbnail from "/public/img/pokedex_home.png"
@@ -105,13 +107,13 @@ export const portfolio = {
         },
       ],
       stack: [
-        { name: "Nextjs", icon: "/../public/icons/next-js.png" },
-        { name: "Typescript", icon: "/../public/icons/typescript.png" },
-        { name: "React", icon: "/../public/icons/React.png" },
-        { name: "Html", icon: "/../public/icons/html.png" },
-        { name: "Css", icon: "/../public/icons/css.png" },
-        { name: "Tailwind", icon: "/../public/icons/tailwind.png" },
-        { name: "Vercel", icon: "/../public/icons/vercel.png" },
+        { name: "Nextjs", icon: Nextjs },
+        { name: "Typescript", icon: TypeScript },
+        { name: "React", icon: React },
+        { name: "Html", icon: Html },
+        { name: "Css", icon: Css },
+        { name: "Tailwind", icon: Tailwind },
+        { name: "Vercel", icon: Vercel },
       ],
       tec: [
         { name: "Nextjs", link: "https://nextjs.org/" },
