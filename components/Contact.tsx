@@ -63,7 +63,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center gap-4 mb-20 text-white "
+      className="flex flex-col items-center justify-center gap-4 mt-6 text-white mb-28 "
     >
       <h2 className="text-xl font-semibold md:text-4xl ">
         Write me a Message 👇{" "}
