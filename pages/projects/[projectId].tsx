@@ -66,7 +66,10 @@ export default function Project({ project }: { project: IProjectProps }) {
         <h3 className="m-4 text-xl text-center">Technologies</h3>
         <ul className="flex gap-6 ">
           {project.tec.map((item) => (
-            <li className="text-white hover:underline hover:decoration-brand">
+            <li
+              key={item.name}
+              className="text-white hover:underline hover:decoration-brand"
+            >
               <Link href={item.link}>{item.name}</Link>
             </li>
           ))}
