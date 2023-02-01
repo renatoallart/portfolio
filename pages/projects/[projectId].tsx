@@ -46,16 +46,15 @@ export default function Project({ project }: { project: IProjectProps }) {
       <div className=" mt-16 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
         <h3 className="m-4 text-xl text-center">Stack</h3>
-        <div className=" w-[358px] h-[197px] justify-center items-center flex flex-wrap gap-6">
+        <div className=" w-[358px] h-[270px] justify-center items-center flex flex-wrap gap-6">
           {project.stack.map((item) => {
             const width = item.name === "Vercel" ? 99 : 77
             const height = item.name === "Vercel" ? 33 : 77
             return (
               <Image
+                style={{ width, height }}
                 key={item.name}
                 src={item.icon}
-                width={width}
-                height={height}
                 alt={`${item.name}`}
               />
             )
@@ -64,7 +63,7 @@ export default function Project({ project }: { project: IProjectProps }) {
       </div>
       <div className=" mt-6">
         <h3 className="m-4 text-xl text-center">Technologies</h3>
-        <ul className="flex gap-6 ">
+        <ul className="flex flex-wrap justify-center items-center gap-2 ">
           {project.tec.map((item) => (
             <li
               key={item.name}
@@ -74,10 +73,6 @@ export default function Project({ project }: { project: IProjectProps }) {
             </li>
           ))}
         </ul>
-      </div>
-      <div>
-        <h3 className="m-4 text-xl font-semibold text-center">Summary</h3>
-        <p className="text-center">{project.summary}</p>
       </div>
       <div>
         <h3 className="m-4 text-xl font-semibold text-center">Summary</h3>
