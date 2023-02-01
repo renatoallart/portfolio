@@ -73,7 +73,7 @@ export default function Project({ project }: { project: IProjectProps }) {
         </ul>
       </div>
       <div>
-        <h3 className="m-4 text-xl  text-center">Summary</h3>
+        <h3 className="m-4 text-xl font-semibold text-center">Summary</h3>
         <p className="text-center">{project.summary}</p>
       </div>
     </section>
