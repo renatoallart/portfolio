@@ -22,13 +22,12 @@ export function Card({ name, id, thumbnail, nav }: ICardProps) {
   function handleClick(id: string) {
     console.log(id, "id clicked")
     router.push(
-      `/projects/${id}`
-      // {
-      //   pathname: "/project/[projectId]",
-      //   query: { product: id },
-      // },
-      // `/project/${id}?projects=${name}`,
-      // { shallow: true }
+      {
+        pathname: "/project/[projectId]",
+        query: { projectId: id },
+      },
+      `/projects/${id}?project=${name}`,
+      { shallow: true }
     )
   }
 
