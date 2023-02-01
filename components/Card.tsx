@@ -2,6 +2,7 @@ import React from "react"
 import { NavIcons } from "./NavIcons"
 import { v4 as uuidv4 } from "uuid"
 import Image, { StaticImageData } from "next/image"
+import { useRouter } from "next/router"
 
 interface INav {
   name: string
@@ -11,18 +12,33 @@ interface INav {
 }
 interface ICardProps {
   name: string
+  id: number
   thumbnail: StaticImageData
   nav: INav[]
 }
 
-export function Card({ name, thumbnail, nav }: ICardProps) {
+export function Card({ name, id, thumbnail, nav }: ICardProps) {
+  const router = useRouter()
+  function handleClick(id: number) {
+    router.push(
+      `/projects/${id}`
+      // {
+      //   pathname: "/project/[projectId]",
+      //   query: { product: id },
+      // },
+      // `/project/${id}?projects=${name}`,
+      // { shallow: true }
+    )
+  }
+
   return (
     <div
       key={name}
-      className="flex flex-col h-[370px] w-[344px] xl:w-[344px] xl:h-[375px] p-4 border-2 rounded-md border-md border-brand"
+      className="flex flex-col  h-[370px] w-[344px] xl:w-[344px] xl:h-[375px] p-4 border-2 rounded-md border-md border-brand"
     >
       <Image
-        className="w-[296px] self-center h-[167px] xl:w-[387px] xl:h-[181px]"
+        onClick={() => handleClick(id)}
+        className="cursor-pointer w-[296px] self-center h-[167px] xl:w-[387px] xl:h-[181px]"
         src={thumbnail}
         priority
         width={296}

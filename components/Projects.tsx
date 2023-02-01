@@ -9,7 +9,7 @@ interface IProjectsProps {
 export function Projects({ start, end }: IProjectsProps) {
   return (
     <>
-      <section className="flex flex-col items-center justify-center mt-6 text-white ">
+      <section className="flex flex-col items-center justify-center text-white ">
         <h2 className="mb-4 text-xl text-center text-white md:text-4xl text-bold">
           Projects
         </h2>

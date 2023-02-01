@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <header
       className=" 
-      fixed bottom-2 bg-brand rounded-full w-[315px] h-[75px] self-center 
+      fixed md:sticky bottom-2 bg-brand rounded-full w-[315px] h-[75px] self-center 
       md:top-0 md:w-[1024px]  md:rounded-none
      lg:w-full lg:top-0 lg:rounded-none "
     >
