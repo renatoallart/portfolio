@@ -27,9 +27,9 @@ export function Profile() {
         xl:w-[593px] xl:h-[271px]"
         >
           <h1 className="text-xl text-center xl:text-2xl text-bold">
-            Hi,I’m Renato 👋
+            Hi, I’m Renato 👋
           </h1>
-          <p className="text-lg text-center ">
+          <p className="text-center ">
             A developer passionate about technology. I’ve fun creating and
             testing things, always looking for new ideas and technologies.
           </p>
