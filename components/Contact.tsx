@@ -6,7 +6,6 @@ import Image from "next/image"
 import send_email from "@/public/icons/send_email.png"
 import send from "@/public/hovers/send.png"
 import emailjs from "@emailjs/browser"
-import { strict } from "assert"
 
 const formSchema = z.object({
   name: z

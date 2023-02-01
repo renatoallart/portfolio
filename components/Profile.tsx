@@ -10,7 +10,7 @@ export function Profile() {
       <section
         id="projects"
         className="w-[352px] h-[587px] flex flex-col mt-4 justify-center items-center text-white
-        md:w-[1000px] md:h-[275px] md:flex md:flex-row-reverse md:gap-[73px] md:mt-28
+        md:w-[1000px] md:h-[275px] md:flex md:flex-row-reverse md:gap-[73px] md:mt-12
         xl:h-[366px] xl:w-[1044px] xl:gap-[73px]"
       >
         <Image
