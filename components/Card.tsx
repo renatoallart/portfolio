@@ -19,7 +19,7 @@ export function Card({ name, thumbnail, nav }: ICardProps) {
   return (
     <div
       key={name}
-      className="flex flex-col h-[370px] w-[344px] xl:w-[450px] xl:h-[400px] p-4 border-2 rounded-md border-md border-brand"
+      className="flex flex-col h-[370px] w-[344px] xl:w-[344px] xl:h-[375px] p-4 border-2 rounded-md border-md border-brand"
     >
       <Image
         className="w-[296px] self-center h-[167px] xl:w-[387px] xl:h-[181px]"

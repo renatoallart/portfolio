@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <Profile />
-      <Projects length={2} />
+      <Projects start={0} end={2} />
       <Contact />
     </>
   )
