@@ -29,7 +29,7 @@ export function Profile() {
           <h1 className="text-xl text-center xl:text-2xl text-bold">
             Hi,I’m Renato 👋
           </h1>
-          <p className="text-center ">
+          <p className="text-lg text-center ">
             A developer passionate about technology. I’ve fun creating and
             testing things, always looking for new ideas and technologies.
           </p>

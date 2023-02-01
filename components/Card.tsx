@@ -30,8 +30,8 @@ export function Card({ name, thumbnail, nav }: ICardProps) {
         alt={name}
       />
 
-      <div className="mt-8 self-center rounded-full shadow-sm w-[300px] shadow-brand bg-brand h-[5px]"></div>
-      <h3 className="mt-1 text-lg font-semibold text-center text-white">
+      <div className="mt-6 self-center rounded-full shadow-sm w-[300px] shadow-brand bg-brand h-[5px]"></div>
+      <h3 className="mt-3 text-lg font-semibold text-center text-white">
         {name}
       </h3>
 
