@@ -20,6 +20,7 @@ interface ICardProps {
 export function Card({ name, id, thumbnail, nav }: ICardProps) {
   const router = useRouter()
   function handleClick(id: string) {
+    console.log(id, "id clicked")
     router.push(
       `/projects/${id}`
       // {

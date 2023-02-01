@@ -34,7 +34,8 @@ interface IProjectProps {
   tec: ITechnologies[]
 }
 
-export default function index({ project }: { project: IProjectProps }) {
+export default function ProjectById({ project }: { project: IProjectProps }) {
+  console.log(project.id, "id")
   return (
     <section className="flex flex-col items-center justify-center m-6 text-white">
       <Card
