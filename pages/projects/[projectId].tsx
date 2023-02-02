@@ -15,34 +15,41 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
     return <div>Loading...</div>
   }
   return (
-    <section className="flex flex-col items-center justify-center m-6 mb-24 text-white">
-      <Card
-        id={project.id}
-        name={project.name}
-        thumbnail={project.thumbnail}
-        nav={project.nav}
-      />
-      <div className=" m-4 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
-      <div>
-        <h3 className="m-4 text-xl font-semibold text-center">Stack</h3>
-        <div className=" w-[358px] h-[270px] justify-center items-center flex flex-wrap gap-6">
-          {project.stack.map((item) => {
-            const width = item.name === "Vercel" ? 99 : 77
-            const height = item.name === "Vercel" ? 33 : 77
-            return (
-              <Image
-                style={{ width, height }}
-                key={item.name}
-                src={item.icon}
-                alt={`${item.name}`}
-              />
-            )
-          })}
+    <section className="flex flex-col items-center justify-center m-6 mb-24 text-white md:mt-8">
+      <div className="flex flex-col items-center justify-center md:flex md:flex-row md:items-center md:justify-center md:gap-10 md:m-4 xl:gap-36">
+        <Card
+          id={project.id}
+          name={project.name}
+          thumbnail={project.thumbnail}
+          nav={project.nav}
+        />
+        <div className=" m-4 md:hidden self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+        <div>
+          <div className="flex flex-col items-center justify-center md:gap-8">
+            <h3 className="m-2 text-xl font-semibold text-center md:text-2xl">
+              Stack
+            </h3>
+            <ul className=" w-[358px] h-[270px] justify-center items-center flex flex-wrap gap-2">
+              {project.stack.map((item) => {
+                const width = item.name === "Vercel" ? 77 : 54
+                const height = item.name === "Vercel" ? 33 : 54
+                return (
+                  <li key={item.name}>
+                    <Image
+                      style={{ width, height }}
+                      src={item.icon}
+                      alt={`${item.name}`}
+                    />
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
         </div>
       </div>
-      <div className=" m-4 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+      <div className=" m-4 md:hidden self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
-        <h3 className="m-4 text-xl font-semibold text-center">Technologies</h3>
+        <h3 className="m-6 text-xl font-semibold text-center">Technologies</h3>
         <ul className="flex flex-row flex-wrap items-center justify-center gap-2 ">
           {project.tec.map((item) => (
             <li
@@ -54,7 +61,7 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
           ))}
         </ul>
       </div>
-      <div className="m-4 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+      <div className="m-4  self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
         <h3 className="m-4 text-xl font-semibold text-center">Summary</h3>
         <p className="text-center">{project.summary}</p>
