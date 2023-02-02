@@ -6,7 +6,7 @@ import { ParsedUrlQuery } from "querystring"
 import { portfolio } from "@/portfolio"
 import { Card } from "@/components/Card"
 
-import { IProjectProps } from "@/lib/interfaces/projectInterface"
+import { IProjectProps } from "@/interfaces/projectInterface"
 import { getProjectById } from "@/lib/getProjectById"
 
 export default function ProjectById({ project }: { project: IProjectProps }) {
@@ -15,16 +15,16 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
     return <div>Loading...</div>
   }
   return (
-    <section className="flex flex-col items-center justify-center m-6 text-white">
+    <section className="flex flex-col items-center justify-center m-6 mb-24 text-white">
       <Card
         id={project.id}
         name={project.name}
         thumbnail={project.thumbnail}
         nav={project.nav}
       />
-      <div className=" mt-16 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+      <div className=" m-4 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
-        <h3 className="m-4 text-xl text-center">Stack</h3>
+        <h3 className="m-4 text-xl font-semibold text-center">Stack</h3>
         <div className=" w-[358px] h-[270px] justify-center items-center flex flex-wrap gap-6">
           {project.stack.map((item) => {
             const width = item.name === "Vercel" ? 99 : 77
@@ -40,9 +40,10 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
           })}
         </div>
       </div>
-      <div className="mt-6 ">
-        <h3 className="m-4 text-xl text-center">Technologies</h3>
-        <ul className="flex flex-wrap items-center justify-center gap-2 ">
+      <div className=" m-4 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+      <div>
+        <h3 className="m-4 text-xl font-semibold text-center">Technologies</h3>
+        <ul className="flex flex-row flex-wrap items-center justify-center gap-2 ">
           {project.tec.map((item) => (
             <li
               key={item.name}
@@ -53,6 +54,7 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
           ))}
         </ul>
       </div>
+      <div className="m-4 md:m-16 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
         <h3 className="m-4 text-xl font-semibold text-center">Summary</h3>
         <p className="text-center">{project.summary}</p>
@@ -67,7 +69,7 @@ export async function getStaticProps(
   const { params } = context
   if (!params) return
   const { projectId } = params
-  const project = await getProjectById(String(projectId), portfolio.projects)
+  const project = getProjectById(String(projectId), portfolio.projects)
 
   if (!project?.id) return { notFound: true }
   return {
