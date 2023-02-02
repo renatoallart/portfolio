@@ -23,8 +23,8 @@ export function Card({ name, id, thumbnail, nav }: ICardProps) {
     console.log(id, "id clicked")
     router.push(
       {
-        pathname: "/projects/[projectId]",
-        query: { projectId: id },
+        pathname: "/projects/[project]",
+        query: { project: id },
       },
       `/projects/${id}?project=${name}`,
       { shallow: true }
