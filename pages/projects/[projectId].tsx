@@ -1,41 +1,19 @@
+import Image from "next/image"
+import Link from "next/link"
 import { GetStaticPropsContext, PreviewData } from "next"
+import { useRouter } from "next/router"
 import { ParsedUrlQuery } from "querystring"
 import { portfolio } from "@/portfolio"
-import { StaticImageData } from "next/image"
-import Image from "next/image"
 import { Card } from "@/components/Card"
-import Link from "next/link"
 
-interface INav {
-  name: string
-  url: string
-  icon: StaticImageData
-  hoverIcon: StaticImageData
-}
-
-interface IStack {
-  name: string
-  icon: string
-}
-
-interface ITechnologies {
-  name: string
-  link: string
-}
-
-interface IProjectProps {
-  name: string
-  id: string
-  thumbnail: StaticImageData
-  img: StaticImageData[]
-  summary: string
-  nav: INav[]
-  stack: IStack[]
-  tec: ITechnologies[]
-}
+import { IProjectProps } from "@/lib/interfaces/projectInterface"
+import { getProjectById } from "@/lib/getProjectById"
 
 export default function ProjectById({ project }: { project: IProjectProps }) {
-  console.log(project.id, "id")
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <section className="flex flex-col items-center justify-center m-6 text-white">
       <Card
@@ -83,6 +61,22 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
   )
 }
 
+export async function getStaticProps(
+  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
+) {
+  const { params } = context
+  if (!params) return
+  const { projectId } = params
+  const project = await getProjectById(String(projectId), portfolio.projects)
+
+  if (!project?.id) return { notFound: true }
+  return {
+    props: {
+      project,
+    }, // will be passed to the page component as props
+  }
+}
+
 export async function getStaticPaths() {
   const paths = portfolio.projects.map((project) => ({
     params: {
@@ -93,21 +87,5 @@ export async function getStaticPaths() {
   return {
     paths,
     fallback: true,
-  }
-}
-
-export async function getStaticProps(
-  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
-) {
-  const { params } = context
-  if (!params) return
-  const { projectId } = params
-  const project = portfolio.projects.find((project) => project.id === projectId)
-
-  console.log(project)
-  return {
-    props: {
-      project,
-    }, // will be passed to the page component as props
   }
 }
