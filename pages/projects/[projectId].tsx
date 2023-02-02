@@ -82,6 +82,20 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
     </section>
   )
 }
+
+export async function getStaticPaths() {
+  const paths = portfolio.projects.map((project) => ({
+    params: {
+      projectId: project.id,
+    },
+  }))
+  console.log(paths)
+  return {
+    paths,
+    fallback: true,
+  }
+}
+
 export async function getStaticProps(
   context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
 ) {
@@ -95,17 +109,5 @@ export async function getStaticProps(
     props: {
       project,
     }, // will be passed to the page component as props
-  }
-}
-
-export async function getStaticPaths() {
-  const paths = portfolio.projects.map((project) => ({
-    params: {
-      projectId: project.id,
-    },
-  }))
-  return {
-    paths,
-    fallback: true,
   }
 }
