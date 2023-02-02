@@ -15,9 +15,10 @@ interface ICardProps {
   id: string
   thumbnail: StaticImageData
   nav: INav[]
+  isLinkActive: boolean
 }
 
-export function Card({ name, id, thumbnail, nav }: ICardProps) {
+export function Card({ name, id, thumbnail, nav, isLinkActive }: ICardProps) {
   const router = useRouter()
   function handleClick(id: string) {
     console.log(id, "id clicked")
@@ -37,8 +38,9 @@ export function Card({ name, id, thumbnail, nav }: ICardProps) {
       className="flex flex-col  h-[370px] w-[344px] xl:w-[344px] xl:h-[375px] p-4 border-2 rounded-md border-md border-brand"
     >
       <Image
-        onClick={() => handleClick(id)}
-        className="cursor-pointer w-[296px] self-center h-[167px] xl:w-[387px] xl:h-[181px]"
+        style={{ cursor: isLinkActive ? "pointer" : "context-menu" }}
+        onClick={() => (isLinkActive ? handleClick(id) : null)}
+        className=" w-[296px] self-center h-[167px] xl:w-[387px] xl:h-[181px]"
         src={thumbnail}
         priority
         width={296}

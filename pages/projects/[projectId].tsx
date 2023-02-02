@@ -18,6 +18,7 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
     <section className="flex flex-col items-center justify-center m-6 mb-24 text-white md:mt-8">
       <div className="flex flex-col items-center justify-center md:flex md:flex-row md:items-center md:justify-center md:gap-10 md:m-4 xl:gap-36">
         <Card
+          isLinkActive={false}
           id={project.id}
           name={project.name}
           thumbnail={project.thumbnail}
