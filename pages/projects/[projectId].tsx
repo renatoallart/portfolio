@@ -24,13 +24,13 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
           thumbnail={project.thumbnail}
           nav={project.nav}
         />
-        <div className=" m-4 md:hidden self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+        <div className=" mt-8 md:hidden self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
         <div>
           <div className="flex flex-col items-center justify-center md:gap-8">
-            <h3 className="m-2 text-xl font-semibold text-center md:text-2xl">
+            <h3 className="m-4 text-xl font-semibold text-center md:text-2xl md:m-2">
               Stack
             </h3>
-            <ul className=" w-[358px] h-[270px] justify-center items-center flex flex-wrap gap-2">
+            <ul className=" w-[358px] h-[270px] justify-center items-center flex flex-wrap gap-8">
               {project.stack.map((item) => {
                 const width = item.name === "Vercel" ? 77 : 54
                 const height = item.name === "Vercel" ? 33 : 54
@@ -48,9 +48,9 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
           </div>
         </div>
       </div>
-      <div className=" m-4 md:hidden self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+      <div className=" mt-8 md:hidden self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
-        <h3 className="m-6 text-xl font-semibold text-center">Technologies</h3>
+        <h3 className="m-4 text-xl font-semibold text-center">Technologies</h3>
         <ul className="flex flex-row flex-wrap items-center justify-center gap-2 ">
           {project.tec.map((item) => (
             <li
@@ -62,7 +62,7 @@ export default function ProjectById({ project }: { project: IProjectProps }) {
           ))}
         </ul>
       </div>
-      <div className="m-4  self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
+      <div className="mt-8 self-center rounded-full shadow-sm w-[300px] md:w-[675px] shadow-brand bg-brand h-[5px]"></div>
       <div>
         <h3 className="m-4 text-xl font-semibold text-center">Summary</h3>
         <p className="text-center">{project.summary}</p>
