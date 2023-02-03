@@ -1,6 +1,6 @@
+import { useIconState } from "@/hooks/useIconState"
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
-import { useState } from "react"
 
 interface INavIconsProps {
   url: string
@@ -11,19 +11,19 @@ interface INavIconsProps {
 }
 
 export function NavIcons({ url, hover, icon, width, height }: INavIconsProps) {
-  const [hoverIcon, setHoverIcon] = useState(false)
+  const { isHoverIcon, handleHoverIcon } = useIconState()
 
   return (
     <Link
-      onMouseOver={() => setHoverIcon(true)}
-      onMouseOut={() => setHoverIcon(false)}
+      onMouseOver={() => handleHoverIcon(true)}
+      onMouseOut={() => handleHoverIcon(false)}
       // get the first letter of the url
       target={url[0] === "h" ? "_blank" : ""}
       href={url}
     >
       <Image
         style={{ width, height }}
-        src={hoverIcon ? hover : icon}
+        src={isHoverIcon ? hover : icon}
         width={width}
         height={height}
         alt={`${icon}`}

@@ -1,4 +1,3 @@
-import React from "react"
 import { NavIcons } from "./NavIcons"
 import { v4 as uuidv4 } from "uuid"
 import Image, { StaticImageData } from "next/image"
