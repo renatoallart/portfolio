@@ -13,7 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Profile />
-      <Projects start={0} end={2} />
+      <Projects isLinkActive={true} start={0} end={2} />
       <Contact />
     </>
   )
