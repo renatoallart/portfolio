@@ -16,12 +16,11 @@
 
 ## Motivations
 
-Learn Next.js, Zustand, and Typescript.
+Create my own Portfolio.
 
 ## Figma
 
-Lear how to use [Figma]() to create a UI | UX for my portfolio
-<a href="https://www.figma.com/file/ZgrPoRqd6FZbfl38tc3ieX/Portfolio?t=976fsYdxfYWzJICr-0" target="_blank">Figma</a><br/>
+Lear how to use [Figma](https://www.figma.com/file/ZgrPoRqd6FZbfl38tc3ieX/Portfolio?t=976fsYdxfYWzJICr-0) to create a UI | UX for my own portfolio.
 
 ![figma](https://user-images.githubusercontent.com/30847676/217624665-d188132e-9046-4c2b-a434-2739d044b2d0.png)
 
