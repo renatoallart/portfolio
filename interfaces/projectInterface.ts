@@ -21,7 +21,6 @@ export interface IProjectProps {
   name: string
   id: string
   thumbnail: StaticImageData
-  img: StaticImageData[]
   summary: string
   nav: INav[]
   stack: IStack[]
