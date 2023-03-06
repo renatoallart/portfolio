@@ -50,7 +50,7 @@ export const portfolio = {
       id: "1",
       thumbnail: pokedexThumbnail,
       summary:
-        "A responsive application in Vitejs, where the User can search a Pokemon by name, and generate a random list with 3 Pokemons. Clicked on Pokemon can see all Pokemon's stats displayed in the chart.",
+        "A responsive application in Vitejs, where the User can search a Pokemon by name, and generate a random list with 3 Pokemon. Clicked on Pokemon can see all Pokemon's stats displayed in the chart.",
       nav: [
         {
           name: "GitHub",
@@ -164,7 +164,7 @@ export const portfolio = {
       id: "4",
       thumbnail: meals,
       summary:
-        "An application in Vitejs using Javascript to learn how to cooking a few recipes.",
+        "An application in Vitejs using Javascript to learn how to cook a few recipes.",
       nav: [
         {
           name: "GitHub",
